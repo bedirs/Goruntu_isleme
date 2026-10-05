@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="goruntu_isleme_4/goruntu_isleme_4.vcxproj" />
+</Solution>
