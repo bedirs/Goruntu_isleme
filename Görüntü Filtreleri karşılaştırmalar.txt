@@ -1,0 +1,10 @@
+Görüntü Filtreleri karşılaştırmaları 
+
+1-)Sobel ve Prewitt
+Sobel filtresinde görüntüdeki kenarlar daha belirginken prewitte daha silik.Sobel gürültüye karşı daha dirençli ama prewitt sobelden daha az bu yüzden resimde kenar olmayıpta yanlışlıkla kenar algılanabilecek pürüzler gürültüler hatalı hesaplamalar ortaya koyabilir.
+
+2-)Laplacian 3x3 ve Laplacian 7x7
+7x7 derinlik görüntüde gürültülerin olmaması ve netlik açısından 3x3 e göre daha iyi sonuç veriyor.
+
+3-)Canny algoritması 
+Zayıf gürültüleri diğerlerine kıyasla başarıyla siler. Kenar hatlarının belirgin olduğu bir sonuç ortaya çıkarır 
