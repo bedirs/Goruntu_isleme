@@ -1,0 +1,12 @@
+Soru 1: "Neden bu renk paletini seçtiniz?"
+Tek kanallı X-ray görüntüsünde yoğun metal (silah, bıçak) ile organik yoğunluklar (kıyafet, gıda, plastik patlayıcı) gri tonda birbirine çok yakın koyulukta kalır.
+Jet / Turbo Paleti Seçimi: COLORMAP_JET paletinde düşük yoğunluklar ve arka plan soğuk renklere (mavi/lacivert), orta yoğunluktaki yapılar yeşile, en yüksek yoğunluktaki tehdit unsurları (metalik kesici aletler ve silahlar) ise sıcak renklere (sarı, turuncu, kırmızı) haritalanır. Bu spektrum, operatörün dikkatini doğrudan çantanın içindeki yüksek soğurmalı yabancı cisimlere çekerek yorgunluk kaynaklı insan hatasını minimize eder.
+
+Soru 2: "Ürettiğiniz resim ile orijinal renkli resim arasında fark varsa bunu yorumlayınız."
+Farkın Nedeni (Sensör Fiziği vs. Yazılımsal Haritalama):
+
+Orijinal Resim (ThreatsRGB): Çift enerjili (dual-energy) X-ray cihazının donanımından gelir. Cihaz yüksek ve alçak enerjili iki ayrı X ışını gönderir; malzemenin atom numarasına göre renklendirme yapar (Örn: Organik maddeler turuncu, metaller mavi/siyah). Yani renklendirme fiziksel malzeme türüne dayanır.
+
+Bizim Ürettiğimiz Resim: Griye indirgenmiş tek kanallı piksel yoğunluklarının yazılımsal olarak bir renk skalasına (0-255 arası Jet eğrisine) oturtulmasıdır (Pseudo-coloring).
+
+Yorum: Bizim haritalamamızda sadece piksel parlaklığı baz alınır; bu nedenle malzeme türünü (atom numarasını) tam bilmese de parlaklık kontrastını aşırı belirginleştirir ve operatörün nesne kenarlarını, geometrik biçimleri ve çanta içindeki gizlenmiş formları griye kıyasla çok daha hızlı tespit etmesini sağlar.
