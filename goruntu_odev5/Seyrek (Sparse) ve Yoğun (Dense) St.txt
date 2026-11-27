@@ -1,0 +1,16 @@
+Seyrek (Sparse) ve Yoğun (Dense) Stereo Yöntemlerinin Karşılaştırması
+
+Hız ve İşlem Yükü:
+Seyrek stereo yöntemi çok daha hızlı çalışır. Görüntünün yalnızca %5 ile %15 arasındaki kenar pikselleri işlendiği için, tüm pikselleri tarayan yoğun stereo yöntemine göre ortalama 8 ila 15 kat daha fazla hız kazancı sağlar. Yoğun stereo ise görüntüdeki her bir piksel için blok eşleştirme yaptığından işlem maliyeti yüksektir ve yavaştır.
+
+Doğruluk ve Güvenilirlik:
+Seyrek stereo, eşleştirme yaptığı kenar noktalarında çok yüksek doğruluk sunar. Kenar bölgeleri yüksek kontrast ve belirgin doku barındırdığı için yanlış eşleşme (gürültü) oranı oldukça düşüktür. Yoğun stereo yönteminde ise tek renkli duvarlar veya gölgeli alanlar gibi dokusuz bölgelerde pikseller birbirine çok benzediği için sıkça yanlış eşleşmeler ve karıncalanmalar meydana gelir.
+
+Kapsam (Derinlik Bilgisi):
+Seyrek stereo yalnızca nesnelerin dış hatlarında derinlik bilgisi üretir; düz yüzeylerin içi boş (bilinmez) kalır. Yoğun stereo ise sahnedeki her bir piksel için derinlik tahmini üreterek eksiksiz bir 3B yüzey haritası çıkarır.
+
+Kullanım Alanları:
+Seyrek stereo; gerçek zamanlı robot navigasyonu, engel tespiti, görsel odometri (SLAM) ve düşük işlem gücüne sahip gömülü sistemler için uygundur. Yoğun stereo ise 3B modelleme, artırılmış gerçeklik (AR), portre modu arka plan bulanıklaştırma ve detaylı sahne analizi gibi tam derinlik haritası gerektiren uygulamalarda tercih edilir.
+
+Genel Çıkarım:
+Seyrek stereo yaklaşımı, eşleştirme hatasının en yüksek olduğu dokusuz alanları tamamen devre dışı bırakarak hem yüksek güvenilirlik hem de ciddi bir performans artışı sağlar. Buna karşılık, sahnenin tamamını kapsayan yoğun bir 3B derinlik haritası oluşturamadığı için yalnızca nesne sınırlarının uzaklığını tespit etmenin yeterli olduğu gerçek zamanlı senaryolarda yoğun yöntemlere göre çok daha verimli bir çözümdür.
